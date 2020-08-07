@@ -1,11 +1,5 @@
 <h1 align="center"> 利用Github Actions编译TWRP</h1>
 
-<div align="center">
-	<a href="../..">
-		<img src="demo.jpg" title="Demo" />
-	</a>
-</div>
-
 ---
 
 <p align="center">
@@ -20,7 +14,7 @@
 
 <br />
 
-由于编译时间较长，建议把<code>[.github/workflows/actions_twrp.yml](.github/workflows/actions_twrp.yml)</code>末尾上传处的`${{ secrets.GITHUB_TOKEN }}`改成自己的[Personal Access Token](https://github.com/settings/tokens)
+由于编译时间较长，建议把<code>[.github/workflows/Build_TWRP.yml](.github/workflows/Build_TWRP.yml)</code>开头上传处的`${{ secrets.GITHUB_TOKEN }}`改成自己的[Personal Access Token](https://github.com/settings/tokens)
 
 注意保护自己的Personal Access Token，将它放入仓库[Settings](../../settings)里的[Secrets](../../settings/secrets)里后用`${{ secrets.YOUR_TOKEN_NAME }}`来替换`${{ secrets.GITHUB_TOKEN }}`
 
