@@ -51,7 +51,10 @@ jobs:
         sudo -E apt-get update
         sudo -E apt-get -y install git-core gnupg flex bison gperf build-essential zip curl zlib1g-dev gcc-multilib g++-multilib libc6-dev-i386 lib32ncurses5-dev x11proto-core-dev libx11-dev tree lib32z-dev libgl1-mesa-dev libxml2-utils xsltproc unzip jq
         sudo -E apt-get -y autoremove --purge
+        sudo dpkg --list | grep "^rc" | cut -d " " -f 3 | xargs sudo dpkg --purge
         sudo -E apt-get clean
+        sudo -E apt-get autoclean
+        sudo deborphan | xargs sudo apt-get purge -y
         sudo -E apt -y full-upgrade
 
     - name: Get Variables
