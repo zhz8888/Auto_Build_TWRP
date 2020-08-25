@@ -1,7 +1,5 @@
 <h1 align="center"> 利用Github Actions编译TWRP</h1>
 
----
-
 <p align="center">
 	A Github Action to build Recovery
 </p>
